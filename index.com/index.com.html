@@ -1,0 +1,634 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GEEK</title>
+    <script src="https://cdn.staticfile.org/jquery/1.10.2/jquery.min.js">
+    </script>
+    <style>
+      .yaoti {
+        font-family: 方正姚体;
+        font-size: 35px;
+         /*字体设置*/
+      }
+      .box {
+          height: 100px;
+          width: 30%;
+          text-align: left;
+          line-height: 100px;
+      }
+      /* 左对齐 */
+        .shouye {
+            width: 100%;
+            height: 1100px;
+            background-image: url(/sucai/首页背景.png);
+            background-repeat: no-repeat;
+            background-size: 100%;
+        }
+        
+        .temp {
+            width: 100%;
+            height: 210px;
+            background-image: url(/sucai/过渡花纹.png);
+            background-size: 100%;
+            background-repeat: no-repeat;
+        }
+        
+        .chengxuyuan {
+            width: 100%;
+            height: 900px;
+            background-image: url(/sucai/程序猿.png);
+            background-repeat: no-repeat;
+            background-size: contain;
+            background-position: right;
+            margin-left: auto;
+            
+          }
+        
+        .gongchengshi {
+            width: 100%;
+            height: 900px;
+            background-image: url(/sucai/安全工程狮.png);
+            background-repeat: no-repeat;
+            background-size: contain;
+            background-position: left;
+          }
+        
+        .ai {
+            width: 100%;
+            height: 900px;
+            background-image: url(/sucai/ai.png);
+            background-repeat: no-repeat;
+            background-size: contain;
+            background-position: right;
+            margin-left: auto;
+           
+          }
+        
+        .chanpin {
+            width: 100%;
+            height: 900px;
+            background-image: url(/sucai/产品&设计.png);
+            background-repeat: no-repeat;
+            background-size: contain;
+            background-position: left;
+            
+          }
+        .hengxaing {
+            /*让块元素变为横向，来制作横向导航栏*/
+            display: inline;
+          }
+        
+        .uldeshezhi {
+            list-style-type: none;
+            /*取消ul默认值*/
+            margin: 0;
+            padding: 0;
+            overflow: hidden;
+            background-color: rgb(254, 249, 230)
+          }
+        
+        li a {
+            text-decoration: none;
+            /*取消网页默认下划线*/
+          }
+        
+        .geek {
+            /* logo */
+            width: 30%;
+            height: 20%;
+            margin: 0 auto; 
+            background-size: contain;
+            /*自动填充盒子*/
+            background-image: url(/sucai/Geek1.png);
+            background-repeat: no-repeat;
+            /*防止图片重复 */
+            margin-top: 0px;
+        }
+        /* 我手贱点了一下复制，导致不知道怎么让标志上去了调不回来 */
+        
+        
+        
+        .geek {
+            cursor: pointer;
+            /*鼠标变成手指样式*/
+            transition: all 0.6s;
+            /*所有属性变化在0.6秒内执行动画*/
+          }
+        
+        .geek:hover {
+            transform: scale(1.2);
+            /*鼠标放上之后元素变成1.2倍大小*/
+          }
+        
+        .daohang {
+            width: 100%;
+            position: fixed;
+            /* 使导航栏置顶固定 */
+            margin-top: 0;
+            top: 0；
+            /* 让导航栏顶端距离为0 */
+          }
+        
+        .keep {
+            width: 25%;
+            height: 15%;
+            margin: 0 auto;
+            background-position: center;
+            background-image: url(/sucai/geek.png);
+            background-size: contain;
+            background-repeat: no-repeat;
+
+        }
+        
+        .keep {
+            cursor: pointer;
+            transition: all 0.6s;
+          }
+        
+        .keep:hover {
+            transform: scale(1.2);
+          }
+        
+        .about {
+            width: 100%;
+            height: 550px;
+          }
+        .button1 {
+          -webkit-transition-duration: 0.4s;
+          transition-duration: 0.4s;
+          padding: 16px 32px;
+          text-align: center;
+          background-color: white;
+          color: black;
+          border: 2px solid #4CAF50;
+          border-radius:5px;
+        }
+        .button1:hover {
+          background-color: #4CAF50;
+          color: white;
+        }
+        /* 按钮动态 */
+
+        .heji {
+            width: 100%;
+            height: 900px;
+            background-image: url(/sucai/合集.png);
+            background-size: contain;
+            background-repeat: no-repeat;
+            background-size: 100%;
+        }
+        
+        .wenzi {
+            text-align: center;
+            width: 500px;
+            margin-left: 400px;
+        }
+        
+        .anniu {
+            margin-left: 300px;
+        }
+        
+       .guodu1 {
+            width: 100%;
+            height: 210px;
+            background-image: url(/sucai/youshang01.png);
+            background-size: 100%;
+            background-repeat: no-repeat;
+          } 
+          .guodu2 {
+            width: 100%;
+            height: 210px;
+            background-image: url(/sucai/youshang01.png);
+            background-size: 100%;
+            background-repeat: no-repeat;
+          } 
+        .end {
+          width: 100%;
+          height: 2000px;
+          background-image: url(/sucai/question.png);
+          background-size: 100%;
+          background-size: contain;
+          background-repeat: no-repeat;
+        }
+        .end1 {
+            width: 70%;
+            height: 60%;
+            margin: auto;
+            margin-bottom: 300px;
+        }
+        
+
+       
+     </style>
+</head>
+
+<body> <!-- 悬浮框 -->
+    <div class="shouye">
+        <div class="daohang">
+            <ul class="uldeshezhi">
+                <li class="hengxaing" style="font-size: 30px;margin-left: 30px;"><a href="#about">About Us</a></li>
+                <li class="hengxaing" style="font-size: 30px;margin-left: 60px;"><a href="#jieshao">Introduction</a></li>
+                <li class="hengxaing" style="font-size: 50px;margin-left: 200px;"><a href="#">NewThread</a></li>
+                <li class="hengxaing" style="font-size: 30px;margin-left: 80px;"><a href="#us">Q&Ask</a></li>
+                <li class="hengxaing" style="font-size: 30px;margin-left: 40px;"><a href="#lianxi">ContactUs</a></li>
+            </ul>
+        </div>
+        <div class="geek"></div>
+        <div class="keep"></div>
+    </div>
+    <div class="temp">
+        <p class="INTRODUCE" style="text-align: center;font-size: 60px;text-shadow: 20px 10px 1px rgb(180, 180, 230);" id="jieshao">~INTRODUCTION~</p>
+    </div>
+
+<!-- 主体部分 -->
+    <div style="background-color: ghostwhite;height:900px;width: 40%;float:left;">
+      <p class="yaoti">开发程序猿</p>
+      <p class="yaoti" style="color:rgb(71, 121, 188)">“Stay Hungry，Stay Foolish” </p>
+      <p class="yaoti">前端：前端开发是创建Web或app视觉界面呈现给用户的过程通过HTML，CSS及JavaScript以及衍生出来的各种技术、框架、解决方案，实现互联网产品的用户界面交互。</p>
+      <p class="yaoti">后端：通常也称服务器端开发。不对用户显示,负责处理前端的请求，进行逻辑处理和数据交互。</p>
+      <p class="yaoti">客户端:  移动应用开发是为了小型、无线计算设备编写软件的流程和程序的集合，例如智能手机或平板电脑。</p>
+    </div>
+      <div style="background-color: ghostwhite;height:900px;width: 60%;float:left;" class="chengxuyuan"></div>
+      </div>
+
+    <div style="background-color:lightgoldenrodyellow;height:900px;width: 60%;float:left;" class="gongchengshi"></div>
+      <div style="background-color:lightgoldenrodyellow;height:900px;width: 40%;float:left;">
+      <p class="yaoti">安全攻城狮(Sacurity) </p>
+      <p class="yaoti" style="color:rgb(71, 121, 188)">"我们需要的不是脚本小子，而是对底层原理了如指掌。"</p>
+      <p class="yaoti">主要涉及网络攻防、漏洞挖掘，能够代表团队参加CTF安全赛事。</p>
+      <p class="yaoti">互联网安全从其本质上来讲其实就是互联网上的信息安全。</p>
+      <p class="yaoti">网络安全攻城狮是拥有扎实基础的SuperHacker,同时具有强大的自学能力。</p>
+      <p class="yaoti">网络安全攻城狮能够识别IT系统的优缺点。并且了解黑客以及网络犯罪手段,且精通网络安全技术:包括服务漏洞扫描、程序漏洞分析检测、病毒木马防范等。</p>
+      </div>
+      </div>   
+
+    <div style="background-color: lightpink;height:900px;width: 40%;float:left;">
+      <p class="yaoti">AI/算法(AI/AIGO) </p>
+      <p class="yaoti" style="color:rgb(71, 121, 188)">"路漫漫其修远兮，非大毅力者不能"</p>
+      <p class="yaoti">人工智能站在了风口，机器学习和深度学习是它的分支，是团队仍在探索的方向。</p>
+      <p class="yaoti">当下AI技术的应用涉及到图像处理、自然语言处理、推荐系统和无人驾驶等领域。</p>
+      <p class="yaoti">AI的核心就是算法和性能。充满科技感的背后，是大量的数学统计理论和计算机知识。</p>
+    </div>
+      <div style="background-color: lightpink;height:900px;width: 60%;float:left;" class="ai"></div>
+      </div>
+
+    <div style="background-color: mediumpurple;height:900px;width: 60%;float:left;" class="chanpin"></div>
+      <div style="background-color: mediumpurple;height:900px;width: 40%;float:left;">
+        <p class="yaoti">产品经理/UI设计(PM/UI) </p>
+        <p class="yaoti" style="color:rgb(71, 121, 188)">"好的软件的特征是,明明没用过，但总觉得用过似的。"</p>
+        <p class="yaoti">PM是针对某一项或是某一类的产品进行规划和管理的人员。</p>
+        <p class="yaoti">PM需要拥有缜密的产品逻辑思维，研究用户心理，负责产品的整个生命周期。</p>
+        <p class="yaoti">PM参与产品的UI和交互设计，为设计和开发确定产品原型，能够将产品变得有个性,操作变得舒适简单、自由。</p>
+        <p class="yaoti">PM需要一定的文档能力和沟通能力，能够在团队合作的过程中跟各个角色进行有效沟通。</p>
+      </div>
+      </div>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <!-- 不知道怎么div的位置有问题，只能隔开，不然显示不了图片，同时跳转也有问题 -->
+      <div class="guodu1">
+          <h1 style="text-align: center;font-size: 55px;" >About Us</h1>
+      </div>
+      
+    <div class="about" id="about">
+        <div style="float: left;width: 20%;height:500px;border-radius: 50px;border: 10px solid rgb(138, 136, 182);margin-left: 100px;">
+            <img src="/sucai/duoyuan.png" style="width: 50%;margin-left: 100px ;">
+            <p style="font-size:  25px;" class="yaoyi">多元化是我们的特色。在这里，你可以拥有多种方向选择，前后端、安全、AI、产品/设计、游戏等。</p>
+        </div>
+        <div style="float: left;width: 20%;height:500px;margin-left: 200px;border-radius: 50px;border: 10px solid rgb(138, 136, 182);">
+            <img src="/sucai/shijian.png" style="width:50%;margin-left: 100px ;">
+            <p style="font-size:  25px;" class="yaoyi">耐心、毅力是我们必备的品质，每周我们会至少花30小时在实验室中。以保证技术的精进。</p>
+        </div>
+        <div style="float: left;width: 20%;height:500px;margin-left: 200px;border-radius: 50px;border: 10px solid rgb(138, 136, 182);">
+            <img src="/sucai/speech.png" style="width:50%;margin-left: 100px ;">
+            <p style="font-size:  25px;" class="yaoyi">每周我们会举行一次技术例会，用来汇报我们的学习内容，供成员之间交流学习。</p>
+        </div>
+      </div>
+
+    <div class="guodu2"></div>
+    <div class="heji" id="lianxi">
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <div class="wenzi" id="con">
+            <p style="font-size:  25px;color: rgb(85, 107, 102);">•热爱计算机，具有geek精神，喜欢DIY，动手能力较强</p>
+            <p style="font-size:  25px;color: rgb(85, 107, 102);">•有编程/算法/硬件基础为佳(有作品可附上)</p>
+            <p style="font-size:  25px;color: rgb(85, 107, 102);">•有足够的空余时间，热爱思考，对事物有自己的见解</p>
+            <p style="font-size:  25px;color: rgb(85, 107, 102);">ps:非新思路统招只有通过发送邮件自我介绍后，收到邮件回执后才会被允许进群,在读学生,都可邮件到</p>
+            <p style="font-size:  25px;color: rgb(85, 107, 102);">newthread_geek@outlook.com报名加入.(信中需备注个人基本信息以及意向方向,此招新活动为长期招新)</p>
+        </div>
+        <div class="anniu">
+            <span class="button1"><a href="https://graph.qq.com/oauth2.0/show?which=Login&display=pc&response_type=code&client_id=101559500&redirect_uri=https:%2F%2Fcpo.qq.com%2Fconnect%2Fcallback&scope=get_user_info" target="_blank" style="color: white;font-size: 25px;">QQ Group</a></span>
+            <span class="button1" style="margin-left: 200px;"><a href="https://mail.qq.com/" target="_blank" style="color: white;font-size: 25px;">E-mail</a></span>
+            <span class="button1" style="margin-left: 200px;"><a href="https://github.com/" target="_blank" style="color: white;font-size: 25px;">Github</a></span>
+        </div>
+    </div>
+
+  
+    <div  class="end" id="us">
+      <div class="end1">
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <div class="Q1">
+            <p style="font-size: 25px;color: white;">1.什么是Geek(极客)？Geek精神又是什么？</p>
+        </div>
+        <div class="A1">
+            <p style="font-size: 25px;">拥有好奇之心，改变之力，爱钻研，能折腾。</p>
+        </div>
+        <script>
+            $(document).ready(function() {
+                $(".Q1").click(function() {
+                    $(".A1").toggle();
+                });
+            });
+        </script>
+        <div class="Q2">
+            <p style="font-size: 25px;color: white;">2.招新是安排在什么时间？</p>
+        </div>
+        <div class="A2">
+            <p style="font-size: 25px;">正式招新时间是在9月下旬~10月上旬，不过今年会有一些改动</p>
+            <p style="font-size: 25px;">可以加入我们的QQ群，招新具体的安排/变动会在招新群通知。</p>
+        </div>
+        <script>
+            $(document).ready(function() {
+                $(".Q2").click(function() {
+                    $(".A2").toggle();
+                });
+            });
+        </script>
+        <div class="Q3">
+            <p style="font-size: 25px;color: white;">3.我们有考核吗？考核流程是怎样的呀？</p>
+        </div>
+        <div class="A3">
+            <p style="font-size: 25px;">嗯...我们一共有一轮笔试和两轮面试。权衡技术、经验和学习能力，第一轮是一些视野性的题目，淘汰率并不高。第二轮单</p>
+            <p style="font-size: 25px;">独面试，根据你的笔试提出技术相关的问题、兴趣爱好、个人看法。最后一轮群面，首先问及时间分配上的问题，其次也会向</p>
+            <p style="font-size: 25px;">你提出各种奇怪的问题。这一轮中许多题目其实并不难，也无标准答案，重在考察同学们在压力下的逻辑思维。全部通过成为</p>
+            <p style="font-size: 25px;">预备成员啦。</p>
+        </div>
+        <script>
+            $(document).ready(function() {
+                $(".Q3").click(function() {
+                    $(".A3").toggle();
+                });
+            });
+        </script>
+        <div class="Q4">
+            <p style="font-size: 25px;color: white;">4.考核是怎样的形式？</p>
+        </div>
+        <div class="A4">
+            <p style="font-size: 25px;">在考核期间每人会拥有一位'长者'带你入门，学习技术与知识，交流经验与想法。完成每周的新人任务后再进行一次考核筛选</p>
+            <p style="font-size: 25px;">后就可以成为Geek组正式成员啦！在考核期必须满足每周30个小时在实验室哦,所以考核期也不可以懈怠哦！</p>
+        </div>
+        <script>
+            $(document).ready(function() {
+                $(".Q4").click(function() {
+                    $(".A4").toggle();
+                });
+            });
+        </script>
+        <div class="Q5">
+            <p style="font-size: 25px;color: white;">5.进入Geek组之后都有什么福利呢？ </p>
+        </div>
+        <div class="A5">
+            <p style="font-size: 25px;">1对1的新人指引，每一个成员都有会一个mentor, 带你初入门槛，与你一同成长，组内管理较宽松,在尊重其他人的前提下可</p>
+            <p style="font-size: 25px;">以尽情发挥自己的个性。打破平淡，与同样疯狂的人把疯狂的idea实现，磨砺耐性、培养思维、成就梦想。Lab设备/网络资源</p>
+            <p style="font-size: 25px;">充足，闲暇之余也有组织活动。更有许多的故事等你来听~</p>
+        </div>
+        <script>
+            $(document).ready(function() {
+                $(".Q5").click(function() {
+                    $(".A5").toggle();
+                });
+            });
+        </script>
+        <div class="Q6">
+            <p style="font-size: 35px;color: white;">6.进入团队会影响我的日常学习吗？ </p>
+        </div>
+        <div class="A6">
+            <p style="font-size: 25px;">你要知道大学是一个可以自由安排自己学习生活的地方。如果你想在上课之余充实自己、激励自己，最好的方法就是和比自己</p>
+            <p style="font-size: 25px;">更优秀的人在一起。团队不缺优秀的人，而我们也期待同样优秀的你，让我们一起前进！小组里也有不少保研, 考研的前辈</p>
+            <p style="font-size: 25px;">们, 大部分都能找到一个平衡点, 而且团队的经历对你日后读研, 工作都大有裨益。</p>
+        </div>
+        <script>
+            $(document).ready(function() {
+                $(".Q6").click(function() {
+                    $(".A6").toggle();
+                });
+            });
+        </script>
+        <div class="Q7">
+            <p style="font-size: 25px;color: white;">7.老师以及学长学姐们的期望是什么? </p>
+        </div>
+        <div class="A7">
+            <p style="font-size: 25px;">我们希望你有很强的自学能力，同时关注新事物、新技术，喜欢挑战，逻辑性强，善于和各种文化的人合作.“每个人都可以做</p>
+            <p style="font-size: 25px;">自己想做的事情，每个人的方向不一样。如果你想做产品或有不错的 idea，那么就可以找志同道合的人一起合作。”</p>
+        </div>
+        <script>
+            $(document).ready(function() {
+                $(".Q7").click(function() {
+                    $(".A7").toggle();
+                });
+            });
+        </script>
+    </div>
+
+</div>
+
+
+</body>
+
+</html>
+    
+
